@@ -19,7 +19,7 @@ const PhoneItem = ({ onDelete, item }) => {
           </div>
         </div>
         <div className='extra content'>
-          <button className='ui button' onClick={() => onDelete(item)}>Delete</button>
+          <button className='ui button' onClick={() => onDelete({key: item.key})}>Delete</button>
         </div>
       </div>
     );
@@ -28,6 +28,7 @@ const PhoneItem = ({ onDelete, item }) => {
 PhoneItem.propTypes = {
   onDelete: PropTypes.func.isRequired,
   item: PropTypes.shape({
+    key: PropTypes.number,
     phoneNumber: PropTypes.string,
     name: PropTypes.string,
     company: PropTypes.string,

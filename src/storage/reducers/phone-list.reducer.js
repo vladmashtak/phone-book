@@ -2,14 +2,7 @@ import { ADD_PHONE_ITEM, DELETE_PHONE_ITEM } from '../actions/phone-list.actions
 
 const initialState = {
   incrementKey: 0,
-  items: [{
-    key: 0,
-    phoneNumber: '',
-    name: '',
-    company: '',
-    email: '',
-    photo: ''
-  }]
+  items: []
 };
 
 export default (state = initialState, {type, payload}) => {

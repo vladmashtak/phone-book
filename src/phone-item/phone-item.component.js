@@ -5,22 +5,24 @@ import './phone-item.component.css';
 
 const PhoneItem = ({ onDelete, item }) => {
     return (
-      <div className='item ui card'>
-        <div className='image'>
-          <img src={item.photo} alt='avatar'/>
-        </div>
-        <div className='content'>
-          <a className='header'>{item.name}</a>
-          <div className='meta'>
-            <span className='date'>{item.phoneNumber}</span>
+      <div className='four wide column phone-item__column'>
+        <div className='item ui card'>
+          <div className='image'>
+            <img src={!item.photo ? '/image.png' : item.photo} alt='avatar'/>
           </div>
-          <div className='description'>
-            <p>Email: {item.email}</p>
-            <p>Company: {item.company}</p>
+          <div className='content'>
+            <a className='header'>{item.name}</a>
+            <div className='meta'>
+              <span className='date'>{item.phoneNumber}</span>
+            </div>
+            <div className='description'>
+              <p>Почта: {item.email}</p>
+              <p>Компания: {item.company}</p>
+            </div>
           </div>
-        </div>
-        <div className='extra content'>
-          <button className='ui button' onClick={() => onDelete({key: item.key})}>Delete</button>
+          <div className='extra content'>
+            <button className='ui button' onClick={() => onDelete({key: item.key})}>Удалить</button>
+          </div>
         </div>
       </div>
     );

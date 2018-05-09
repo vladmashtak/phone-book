@@ -1,0 +1,4 @@
+.phone-item__column {
+    display: flex!important;
+    justify-content: center!important;
+}

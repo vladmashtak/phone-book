@@ -10,12 +10,13 @@ const PhoneItem = ({ onDelete, item }) => {
           <img src='/images/avatar2/large/kristy.png' alt='avatar'/>
         </div>
         <div className='content'>
-          <a className='header'>Kristy</a>
+          <a className='header'>{item.name}</a>
           <div className='meta'>
-            <span className='date'>Joined in 2013</span>
+            <span className='date'>{item.phoneNumber}</span>
           </div>
           <div className='description'>
-            Kristy is an art director living in New York.
+            <p>Email: {item.email}</p>
+            <p>Company: {item.company}</p>
           </div>
         </div>
         <div className='extra content'>

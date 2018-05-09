@@ -7,7 +7,7 @@ const PhoneItem = ({ onDelete, item }) => {
     return (
       <div className='item ui card'>
         <div className='image'>
-          <img src='/images/avatar2/large/kristy.png' alt='avatar'/>
+          <img src={item.photo} alt='avatar'/>
         </div>
         <div className='content'>
           <a className='header'>{item.name}</a>

@@ -25,10 +25,6 @@ const validate = values => {
     errors.name = 'Обязательно к заполнению';
   }
 
-  if (!values.photo) {
-    errors.photo = 'Обязательно к заполнению';
-  }
-
   return errors;
 };
 
@@ -60,9 +56,8 @@ const PhoneForm = ({handleSubmit, invalid}) => {
       </div>
       <div className='field'>
         <label htmlFor='photo'>Фото</label>
-        <Field name='photo' component={renderField} type='text'/>
+        <Field name='photo' component={ImageUploader} type='file'/>
       </div>
-      <ImageUploader/>
       <button className='ui button' disabled={invalid} type='submit'>Submit</button>
     </form>
   );

@@ -1,4 +1,4 @@
-import { ADD_PHONE_ITEM, DELETE_PHONE_ITEM, EDITE_PHONE_ITEM } from '../actions/phone-list.actions';
+import { ADD_PHONE_ITEM, DELETE_PHONE_ITEM } from '../actions/phone-list.actions';
 
 const initialState = {
   incrementKey: 0,
@@ -43,9 +43,6 @@ export default (state = initialState, {type, payload}) => {
         ...state,
         items: newItems
       };
-    }
-    case EDITE_PHONE_ITEM: {
-      return state;
     }
     default:
       return state;
